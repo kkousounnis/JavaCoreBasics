@@ -5,6 +5,9 @@
  */
 package main;
 
+import factory.ShapeFactory;
+import interfaces.Shape;
+
 /**
  *
  * @author konstantinos
@@ -15,7 +18,16 @@ public class FactoryDesignPattern {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ShapeFactory shapeFactory = new ShapeFactory();
+        
+        Shape shape1 = shapeFactory.getShape("CIRCLE");
+        shape1.draw();
+        
+        Shape shape2 = shapeFactory.getShape("RECTANGLE");
+        shape2.draw();
+        
+        Shape shape3 = shapeFactory.getShape("SQUARE");
+        shape3.draw();
     }
     
 }
