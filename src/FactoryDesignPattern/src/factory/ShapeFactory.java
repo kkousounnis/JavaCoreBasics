@@ -6,7 +6,7 @@ import models.Circle;
 import models.Rectangle;
 import models.Square;
 
-public class ShapeFactory extends AbstractFactory{
+public class ShapeFactory extends AbstractFactory {
 
     //use getShape method to get object of typeshape
     @Override
@@ -14,18 +14,18 @@ public class ShapeFactory extends AbstractFactory{
         if (shapeType == null) {
             return null;
         }
-        if(shapeType.equalsIgnoreCase("CIRCLE")){
+        if (shapeType.equalsIgnoreCase("CIRCLE")) {
             return new Circle();
-        }else if(shapeType.equalsIgnoreCase("RECTANGLE")){
+        } else if (shapeType.equalsIgnoreCase("RECTANGLE")) {
             return new Rectangle();
-        }else if(shapeType.equalsIgnoreCase("SQUARE")){
+        } else if (shapeType.equalsIgnoreCase("SQUARE")) {
             return new Square();
         }
         return null;
     }
-    
+
     @Override
-    Color getColor(String color){
+    public Color getColor(String color) {
         return null;
     }
 
